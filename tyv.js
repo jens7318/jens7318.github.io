@@ -1,6 +1,7 @@
 total = 0
 vundet = 0
 tabt = 0
+procent = 0
 function figur(nr) {
 if(nr == 1) {
 return 'kirsebaer.gif'
@@ -68,5 +69,9 @@ else {
 vundet += 1
 ok = confirm('Du vandt '+gevinst+' kr. Du har i alt tjent '+total+' kr. Vil du prøve igen?')
 }
+procent = vundet/tabt*100
+document.getElementById("p2").innerHTML = "Antal gange vundet: "+vundet
+document.getElementById("p3").innerHTML = "Antal gange tabt: "+tabt
+document.getElementById("p4").innerHTML = "Procent: "+procent+"%"
 }
 }
